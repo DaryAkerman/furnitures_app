@@ -2,12 +2,11 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import pymysql
 from sqlalchemy import create_engine
-from sqlalchemy.exc import OperationalError
 
 app = Flask(__name__)
 db_user = 'username'
 db_password = 'password'
-db_host = 'db'
+db_host = 'my-mysql'
 db_name = 'furnituredb'
 app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{db_user}:{db_password}@{db_host}/{db_name}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
